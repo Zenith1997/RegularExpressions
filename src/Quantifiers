@@ -1,0 +1,19 @@
+Quantifiers
+
+a?  : a can be appeared 0-1(0 or 1)
+
+a*  : or more
+
+a+  : 1 or more
+
+a{n}: exactly n times
+
+a{n,}: at least n times
+
+a{m,n} : at least m and most n times
+
+Greedy quantifiers : X?,X* -Java machhine work really hard to ffind the match
+
+Reluctant quantifiers : X??,X*? -Reads one character at a time,nly workd forward until the match found
+
+Possessive quantifiers : X?+,X*+,X++ -Try to match the pattern only once

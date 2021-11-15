@@ -1,0 +1,88 @@
+Match
+  private static final String REGEX ="fox";
+    private static final String INPUT = "The quick brown fox";
+
+    fox
+
+Match1
+    private static final String REGEX ="fo.";
+    private static final String INPUT = "The quick brown fox";
+
+    fox
+
+Match2
+    private static final String REGEX =".o.";
+    private static final String INPUT = "The quick brown fox";
+
+    fox
+
+Match3
+ private static final String REGEX ="[abdf]ox";//any character of a or b or d or f following ox will regognise s a valid match
+    private static final String INPUT = "The quick brown dox";
+
+
+Match4
+
+    private static final String REGEX ="[^abdf]ox";
+    //any character of a or b or d or f following ox will recognised as an INVALID match
+    private static final String INPUT = "The quick brown aox";
+
+Match5
+    private static final String REGEX ="[f-l]ox[1-5]";
+    private static final String INPUT = "The quick brown fox5 ";
+
+
+Match6
+    private static final String REGEX ="[rcb]at[1-4[4-8]]";
+    private static final String INPUT = " rat8";// unions
+
+
+Match7
+ private static final String REGEX ="[a-f&&[efg]]";
+    private static final String INPUT = "ratf" ;
+
+Match7p2
+      private static final String REGEX ="[rcb]at[1-6&&[67]]";// intersection
+       private static final String INPUT = "rat6";
+
+
+Match8
+  private static final String REGEX ="[rcb]at[1-5&&[^^34]]";//negation intersection.
+
+    private static final String INPUT = "rat2";
+
+
+Match9
+    private static final String REGEX ="[^\s][a-z]*";
+    //capturing  non  whitespaces such as !@#$%^&*()_+|}"{:?><~
+    private static final String INPUT = " msdfsf";
+
+
+Match10
+     private static final String REGEX ="a*";
+        private static final String INPUT = "a";
+
+
+Match11
+private static final String REGEX ="[abc]{3}";
+        private static final String INPUT = "abccab";
+
+
+Match12
+    private static final String REGEX ="[abc]{3,}";
+    private static final String INPUT = "abccab";
+
+
+Match13
+    private static final String REGEX ="abc{3}";
+    private static final String INPUT = "abccab";
+
+
+Match14
+    private static final String REGEX ="(abc){1}";
+    private static final String INPUT = "abcabc";
+
+
+Match15
+    private static final String REGEX ="(abc){3}";
+    private static final String INPUT = "abcabcabcabcabcabc";
